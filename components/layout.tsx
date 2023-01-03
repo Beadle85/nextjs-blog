@@ -7,7 +7,12 @@ import utilStyles from '../styles/utils.module.css';
 const name = 'Beadle';
 export const siteTitle = 'Next.js Sample Website';
 
-export default function Layout({ children, home }) {
+interface IProps {
+  children: React.ReactNode;
+  home?: boolean;
+}
+
+export default function Layout({ children, home }: IProps) {
   return (
     <div className={styles.container}>
       <Head>
